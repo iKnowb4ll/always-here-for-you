@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe3ed">
+<title>For My Dearest Momay ♡</title>
+<style>
+  :root { --pink:#f6a9c4; --deep:#b94f79; --ink:#75445a; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100vh; overflow-x:hidden; color:var(--ink);
+    font-family:Georgia,"Times New Roman",serif;
+    background:radial-gradient(circle at 15% 15%,rgba(255,255,255,.9),transparent 30%),
+      radial-gradient(circle at 85% 80%,rgba(255,205,224,.65),transparent 35%),
+      linear-gradient(145deg,#fff3f7,#ffe0eb 55%,#fff7fa);
+  }
+  .pixel-sky { position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0; }
+  .petal {
+    position:absolute; top:-24px; width:10px; height:10px; opacity:.9;
+    image-rendering:pixelated; background:#f28bb2;
+    box-shadow:10px 0 #f28bb2,0 10px #f28bb2,10px 10px #f28bb2,
+      20px 10px #f7b1ca,10px 20px #f7b1ca;
+    animation:pixel-fall linear infinite; will-change:transform;
+  }
+  .petal:nth-child(3n) {
+    background:#ffd0df;
+    box-shadow:10px 0 #ffd0df,0 10px #ffd0df,10px 10px #ffd0df,
+      20px 10px #f6a8c3,10px 20px #f6a8c3;
+  }
+  .petal:nth-child(4n) { opacity:.7; }
+  @keyframes pixel-fall {
+    0% { transform:translate3d(0,-5vh,0) rotate(0deg); }
+    25% { transform:translate3d(18px,25vh,0) rotate(90deg); }
+    50% { transform:translate3d(-12px,52vh,0) rotate(180deg); }
+    75% { transform:translate3d(16px,78vh,0) rotate(270deg); }
+    100% { transform:translate3d(-8px,112vh,0) rotate(360deg); }
+  }
+  .wrap { position:relative; z-index:1; width:min(92%,760px); margin:0 auto; padding:48px 0 64px; text-align:center; }
+  .eyebrow { letter-spacing:.22em; text-transform:uppercase; font:11px/1.5 Arial,sans-serif; color:#bd7290; }
+  h1 { margin:12px 0 8px; color:#b84f79; font-size:clamp(2rem,7vw,3.5rem); font-weight:normal; }
+  .subtitle { margin:0 0 30px; color:#a86c83; font-style:italic; }
+  .envelope-area { margin:34px auto 22px; perspective:900px; }
+  .envelope { position:relative; width:min(310px,82vw); height:190px; margin:0 auto; background:#f4a9c2; border-radius:8px; box-shadow:0 16px 35px rgba(164,75,111,.18); cursor:pointer; transition:transform .35s ease; }
+  .envelope:hover { transform:translateY(-5px); }
+  .envelope:before { content:""; position:absolute; inset:0; background:#f8c1d3; clip-path:polygon(0 0,50% 58%,100% 0); transform-origin:top; transition:transform .7s ease; z-index:3; border-radius:8px 8px 0 0; }
+  .envelope:after { content:"♡"; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); color:#fff8fb; font-size:38px; z-index:4; }
+  .envelope.open:before { transform:rotateX(180deg); }
+  .envelope-label { margin-top:14px; color:#a45e7a; font:12px Arial,sans-serif; letter-spacing:.08em; }
+  .letter { display:none; margin:28px auto 0; padding:clamp(24px,6vw,42px); max-width:680px; text-align:left; line-height:1.85; font-size:17px; background:rgba(255,250,252,.92); border:1px solid rgba(222,143,173,.45); border-radius:14px; box-shadow:0 18px 45px rgba(164,75,111,.12); animation:appear .8s ease both; }
+  .letter.show { display:block; }
+  .letter p { margin:0 0 18px; }
+  .letter .salutation { color:#b84f79; font-size:21px; font-style:italic; }
+  .signature { margin-top:28px; color:#b84f79; font-size:22px; font-style:italic; }
+  .footer { margin-top:30px; font-size:12px; color:#b77b94; }
+  @keyframes appear { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+  @media (prefers-reduced-motion:reduce) { .petal { animation:none; display:none; } *,*::before,*::after { scroll-behavior:auto!important; transition-duration:.01ms!important; } }
+</style>
+</head>
+<body>
+<div class="pixel-sky" id="pixelSky" aria-hidden="true"></div>
+<main class="wrap">
+  <div class="eyebrow">a little something, made with love</div>
+  <h1>For My Dearest Momay ♡</h1>
+  <p class="subtitle">A small letter, just for you.</p>
+  <div class="envelope-area">
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the letter"></div>
+    <div class="envelope-label">CLICK THE ENVELOPE TO OPEN</div>
+  </div>
+  <article class="letter" id="letter">
+    <p class="salutation">My Dearest Momay,</p>
+    <p>I made this little corner of the internet just for you. It may only be a simple website, but every detail carries a piece of what I want you to know: you are important to me, and I appreciate having you in my life.</p>
+    <p>I know that sometimes you need your own space. You may be an avoidant person, and I want you to know that I'll always try to understand you. When you need time, I'll respect that. I won't force you to explain everything right away or make you feel guilty for needing a little distance.</p>
+    <p>You don't have to pretend to be okay around me, either. Whenever you're ready to talk, I'll listen without judging you. And if what you need is quiet instead of conversation, I'll do my best to respect that too. I want you to feel safe being yourself, even on the days when expressing what you feel is difficult.</p>
+    <p>Giving you space doesn't mean I stop caring. I'll still be cheering for you, wishing you good days, and hoping life treats you gently. I also hope we can keep being honest with each other, because your feelings matter and mine do too. I believe understanding each other takes patience from both sides.</p>
+    <p>Thank you for being you, Momay. I hope this little letter reminds you that you don't need to have everything figured out to be appreciated. Take your time, breathe, and remember that you deserve kindness—not only from other people, but from yourself, too.</p>
+    <p>I'll keep choosing patience, understanding, and kindness as we grow and learn more about each other.</p>
+    <p>With all my affection,</p>
+    <div class="signature">Lotlot ♡</div>
+  </article>
+  <div class="footer">made just for you · ♡</div>
+</main>
+<script>
+  const sky=document.getElementById("pixelSky");
+  for(let i=0;i<24;i++){
+    const petal=document.createElement("span");
+    petal.className="petal";
+    petal.style.left=Math.random()*100+"vw";
+    petal.style.animationDuration=(9+Math.random()*11)+"s";
+    petal.style.animationDelay=(-Math.random()*18)+"s";
+    petal.style.scale=.55+Math.random()*.8;
+    sky.appendChild(petal);
+  }
+  const envelope=document.getElementById("envelope");
+  const letter=document.getElementById("letter");
+  function openLetter(){
+    envelope.classList.add("open");
+    window.setTimeout(()=>{
+      letter.classList.add("show");
+      letter.scrollIntoView({behavior:"smooth",block:"start"});
+    },420);
+  }
+  envelope.addEventListener("click",openLetter);
+  envelope.addEventListener("keydown",event=>{
+    if(event.key==="Enter"||event.key===" "){event.preventDefault();openLetter();}
+  });
+</script>
+</body>
+</html>
